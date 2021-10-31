@@ -11,7 +11,8 @@ var close = document.getElementsByClassName("close");
 for (let i  = 0;i < close.length; i++) {
     close[i].onclick = function() {
         var myDiv = this.parentElement;
-        myDiv.style.display = "none";
+        myDiv.remove();
+        //myDiv.style.display = "none";
     }
 }
 
@@ -36,9 +37,22 @@ function newElement() {
     for (let i  = 0; i < close.length; i++) {
         close[i].onclick = function() {
             var myDiv = this.parentElement;
-            myDiv.style.display = "none";
+            myDiv.remove();
+            //myDiv.style.display = "none";
         }
     }
 
+    li.onclick = function() {
+        console.log(this.className);
+        if(!this.className) {
+            this.className = "done";
+        } else {
+            this.className = "";
+        }
+    }
+    
+
 }
+
+
 
